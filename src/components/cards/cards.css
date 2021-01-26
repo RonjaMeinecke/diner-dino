@@ -1,0 +1,24 @@
+figure {
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  width: 88px;
+  height: 88px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+figcaption {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  padding: 10px;
+  text-align: center;
+}
