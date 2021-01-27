@@ -1,19 +1,23 @@
 .card {
   width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .card-image {
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
+  object-position: center;
 }
 
 .card-text {
+  margin: 0;
   color: #4a4b4d;
   font-weight: bold;
   text-align: center;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90vw;
 }
