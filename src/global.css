@@ -14,11 +14,11 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 100%;
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", sans-serif;
   margin: 0;
 }
 
