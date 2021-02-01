@@ -13,3 +13,4 @@ export const Mexican = () => cardsMexican;
 export const Korean = () => cardsKorean;
 export const Japanese = () => cardsJapanese;
 export const container = () => cardsContainer;
+container.parameters = { layout: "fullscreen" };
