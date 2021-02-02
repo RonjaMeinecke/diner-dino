@@ -2,15 +2,15 @@
   border-radius: 20px;
   font-size: 1.2rem;
   color: white;
-  background: #e08993;
+  background: var(--main-color);
   border: none;
   padding: 10px 20px;
 }
 .btn-border {
   border-radius: 20px;
   font-size: 1.2rem;
-  color: #e08993;
+  color: var(--main-color);
   background: none;
-  border: 1px solid #e08993;
+  border: 1px solid var(--main-color);
   padding: 10px 20px;
 }

@@ -13,6 +13,7 @@ export function createRegisterForm() {
 
   const button = document.createElement("button");
   button.innerText = "Register";
+  button.className = "btn";
 
   function register() {
     alert("Registered");
@@ -28,8 +29,9 @@ export function createRegisterForm() {
     "Please enter your email to receive a link to create a new password via email";
 
   const input = document.createElement("input");
-  input.setAttribute("type", "text");
-  input.placeholder = "placeholder-text";
+  input.type = "text";
+  input.placeholder = "Email";
+  input.className = "input";
 
   form.append(title, text, input, button);
 
