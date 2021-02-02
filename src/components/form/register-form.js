@@ -10,17 +10,28 @@
 export function createRegisterForm() {
   const form = document.createElement("form");
   form.className = "form";
+
   const button = document.createElement("button");
   button.innerText = "Register";
 
   function register() {
     alert("Registered");
   }
+
   button.addEventListener("click", register);
+
   const title = document.createElement("h2");
   title.innerText = "Reset Password";
 
-  form.append(title, button);
+  const text = document.createElement("p");
+  text.innerText =
+    "Please enter your email to receive a link to create a new password via email";
 
-  return button;
+  const input = document.createElement("input");
+  input.setAttribute("type", "text");
+  input.placeholder = "placeholder-text";
+
+  form.append(title, text, input, button);
+
+  return form;
 }
