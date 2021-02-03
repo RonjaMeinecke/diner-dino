@@ -1,9 +1,16 @@
+import { createElement } from "../utils/createElement";
+
 function createpinInputElement() {
-  const input = document.createElement("input");
-  input.type = "password";
-  input.placeholder = "✳︎";
-  input.classNme = "input";
-  input.maxLength = "1";
+  // const input = document.createElement("input");
+  // // input.type = "password";
+  // // input.placeholder = "✳︎";
+  // // input.classNme = "input";
+  // // input.maxLength = "1";
+  const input = createElement("input", {
+    className: "input",
+    placeholder: "*",
+    type: "password",
+  });
 
   return input;
 }
