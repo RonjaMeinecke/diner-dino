@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "Metropolis", sans-serif;
+  src: url(./assets/Metropolis.ttf) format ("ttf")
+  src: url(./assets/Metropolis.woff) format ("woff")
+  src: url(./assets/Metropolis.woff2) format ("woff2")
+}
 *,
 *::after,
 *::before {
