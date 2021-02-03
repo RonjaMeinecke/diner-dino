@@ -26,14 +26,21 @@ export function createVerifyForm() {
   text.innerText =
     "please check your mobile number 017*****98 to continue to reset your password";
 
-  const pinOne = createpinInputElement();
-  const pinTwo = createpinInputElement();
-  const pinThree = createpinInputElement();
-  const pinFour = createpinInputElement();
+  function createPasswordContainer() {
+    const pinOne = createpinInputElement();
+    const pinTwo = createpinInputElement();
+    const pinThree = createpinInputElement();
+    const pinFour = createpinInputElement();
 
-  const passwordContainer = document.createElement("div");
-  passwordContainer.className = "form__pin";
-  passwordContainer.append(pinOne, pinTwo, pinThree, pinFour);
+    const password = createElement("div", {
+      className: "form__pin",
+      children: [pinOne, pinTwo, pinThree, pinFour],
+    });
+
+    return password;
+  }
+
+  const passwordContainer = createPasswordContainer();
 
   const button = document.createElement("button");
   button.innerText = "next";
