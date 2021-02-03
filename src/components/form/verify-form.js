@@ -1,3 +1,13 @@
+function createpinInputElement() {
+  const input = document.createElement("input");
+  input.type = "password";
+  input.placeholder = "✳︎";
+  input.classNme = "input";
+  input.maxLength = "1";
+
+  return input;
+}
+
 export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "form";
@@ -9,22 +19,10 @@ export function createVerifyForm() {
   text.innerText =
     "please check your mobile number 017*****98 to continue to reset your password";
 
-  const pinOne = document.createElement("input");
-  pinOne.type = "password";
-  pinOne.placeholder = "✳︎";
-  pinOne.className = "input";
-  const pinTwo = document.createElement("input");
-  pinTwo.type = "password";
-  pinTwo.placeholder = "✳︎";
-  pinTwo.className = "input";
-  const pinThree = document.createElement("input");
-  pinThree.type = "password";
-  pinThree.placeholder = "✳︎";
-  pinThree.className = "input";
-  const pinFour = document.createElement("input");
-  pinFour.type = "password";
-  pinFour.placeholder = "✳︎";
-  pinFour.className = "input";
+  const pinOne = createpinInputElement();
+  const pinTwo = createpinInputElement();
+  const pinThree = createpinInputElement();
+  const pinFour = createpinInputElement();
 
   const passwordContainer = document.createElement("div");
   passwordContainer.className = "form__pin";
