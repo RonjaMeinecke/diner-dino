@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Metropolis", sans-serif;
   margin: 0;
+  font-weight: 300;
 }
 
 input,
@@ -28,6 +29,7 @@ optgroup,
 textarea {
   margin: 0;
   font-family: "Metropolis", sans-serif;
+  font-weight: 200;
 }
 
 a,
