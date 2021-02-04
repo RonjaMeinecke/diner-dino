@@ -32,3 +32,10 @@
   border: none;
   background-color: var(--input-background-color);
 }
+.message {
+  font-weight: 900;
+  color: var(--main-color);
+  font-size: 3em;
+  height: 2.5em;
+  background-color: rgb(255, 0, 191);
+}
