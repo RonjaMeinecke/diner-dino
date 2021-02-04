@@ -12,10 +12,7 @@ function createInputElement() {
 }
 
 export function createVerifyForm() {
-  const inputElement1 = createInputElement();
-  const inputElement2 = createInputElement();
-  const inputElement3 = createInputElement();
-  const inputElement4 = createInputElement();
+
 
   return createElement("form", {
     className: "form",
