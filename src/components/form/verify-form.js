@@ -1,61 +1,62 @@
 import { createElement } from "../utils/createElement";
 
-function createpinInputElement() {
-  // const input = document.createElement("input");
-  // // input.type = "password";
-  // // input.placeholder = "✳︎";
-  // // input.classNme = "input";
-  // // input.maxLength = "1";
-  const input = createElement("input", {
+function createInputElement() {
+  return createElement("input", {
     className: "input",
     placeholder: "*",
-    type: "password",
+    type: "number",
+    maxLength: 1,
+    min: 0,
+    max: 9,
   });
-
-  return input;
 }
 
 export function createVerifyForm() {
-  const form = document.createElement("form");
-  form.className = "form";
 
-  const title = document.createElement("h2");
-  title.innerText = "we have sent a one time password to your mobile";
 
-  const text = document.createElement("p");
-  text.innerText =
-    "please check your mobile number 017*****98 to continue to reset your password";
+  return createElement("form", {
+    className: "form",
+    children: [
+      createElement("h2", {
+        innerText: "we have sent a one time password to your mobile",
+      }),
+      createElement("p", {
+        innerText:
+          "please check your mobile number 071*****12 continue to reset your password",
+      }),
+      createElement("div", {
+        className: "form__otp",
+        children: [inputElement1, inputElement2, inputElement3, inputElement4],
+      }),
+      createElement("input", {
+        type: "submit",
+        innerText: "next",
+        className: "btn",
+      }),
+      createElement("p", {
+        innerText: "didn't receive?",
+        className: "form__hint",
+        children: [
+          createElement("a", {
+            innerText: "click here",
+            href: "#",
+          }),
+        ],
+      }),
+    ],
+    onsubmit: function (event) {
+      event.preventDefault();
+      const password =
+        inputElement1.value +
+        inputElement2.value +
+        inputElement3.value +
+        inputElement4.value;
 
-  function createPasswordContainer() {
-    const pinOne = createpinInputElement();
-    const pinTwo = createpinInputElement();
-    const pinThree = createpinInputElement();
-    const pinFour = createpinInputElement();
-
-    const password = createElement("div", {
-      className: "form__pin",
-      children: [pinOne, pinTwo, pinThree, pinFour],
-    });
-
-    return password;
-  }
-
-  const passwordContainer = createPasswordContainer();
-
-  const button = document.createElement("button");
-  button.innerText = "next";
-  button.className = "btn";
-
-  const hint = document.createElement("p");
-  hint.innerText = "didn't receive?";
-  hint.className = "form__hint";
-
-  const resendLink = document.createElement("a");
-  resendLink.innerText = "click here";
-  resendLink.href = "#";
-
-  hint.append(resendLink);
-
-  form.append(title, text, passwordContainer, button, hint);
-  return form;
+      if (password === "3217") {
+        alert("you got it!");
+      } else {
+        alert("nope, try again!");
+      }
+    },
+  });
 }

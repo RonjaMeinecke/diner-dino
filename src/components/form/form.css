@@ -1,7 +1,13 @@
 .form {
   display: grid;
-  grid-row-gap: 1em;
+  grid-row-gap: 1.5em;
   text-align: center;
+}
+
+.form__otp input::-webkit-outer-spin-button,
+.form__otp input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .form .input {
@@ -12,14 +18,14 @@
   margin-left: 0.5em;
 }
 
-.form__pin {
+.form__OTP {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   grid-column-gap: 1.2em;
 }
 
-.form__pin input {
+.form__OTP input {
   padding: 10px;
   width: 2.8rem;
   border-radius: 10px;
